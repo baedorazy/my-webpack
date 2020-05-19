@@ -7,7 +7,7 @@
 // webpack은 node환경이기 때문에 require
 // main은 vue환경이니까 import
 const path = require('path'); // node가 만들어준 스크립트
-const VueLoaderPluin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
     mode: 'development', // product, none 모드 설정
     devtool: 'eval', // 개발버전엔 eval <속도가 좀 빠름.// 상용 hidden-source-map 많이 씀
@@ -33,7 +33,7 @@ module.exports = {
     },
     // 모듈 들이 후처리 하기 전 가공 해줌.
     plugins: [
-        new VueLoaderPluin(),
+        new VueLoaderPlugin(),
     ],
     output: {
         //filename: 'app.js' 아래와 같음. [name]으로 해놓으면 entry app이름이 들어가.
